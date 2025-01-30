@@ -2,6 +2,8 @@ package com.jegiraldp.market.persistence.entities;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "clientes")
 public class Cliente {
@@ -15,8 +17,12 @@ public class Cliente {
     private String apellidos;
     private String celular;
     private String direccion;
+
     @Column(name = "correo_electronico")
     private String email;
+
+    @OneToMany(mappedBy = "cliente")
+    private List<Compra> compras;
 
 
     public int getIdCliente() {
