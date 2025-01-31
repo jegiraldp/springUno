@@ -3,7 +3,7 @@ package com.jegiraldp.market.domain;
 public class Category {
     private int categoryId;
     private String category;
-    private boolean active;
+    private Boolean active;
 
     public int getCategoryId() {
         return categoryId;
