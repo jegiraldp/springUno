@@ -5,6 +5,8 @@ import com.jegiraldp.market.domain.repository.ProductRepository;
 import com.jegiraldp.market.persistence.crud.ProductoCrudRepository;
 import com.jegiraldp.market.persistence.entities.Producto;
 import com.jegiraldp.market.persistence.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,7 +15,10 @@ import java.util.Optional;
 @Repository
 
 public class ProductoRepository implements ProductRepository {
+    @Autowired
     private ProductoCrudRepository productoCrudRepository;
+    @Qualifier("productMapperImpl")
+    @Autowired
     private ProductMapper mapper;
 
     @Override
