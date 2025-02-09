@@ -15,6 +15,8 @@ public interface PurchaseItemMapper {
             @Mapping(source = "estado", target="active"),
 
     })
+    //no es necesario mapear total, pq se llama igual
+
     PurchaseItem toPurchaseItem(ComprasProducto comprasProducto);
 
     @InheritInverseConfiguration

@@ -33,8 +33,11 @@ public class ProductController {
     }
 
     @PostMapping("/save")
-    public ResponseEntity<Product> save(Product product){
+    /*public ResponseEntity<Product> save(@RequestBody Product product){
         return new ResponseEntity<>(productService.save(product),HttpStatus.CREATED);
+    }*/
+    public Product saveProduct(@RequestBody Product product){
+        return productService.save(product);
     }
 
     @DeleteMapping("/delete/{id}")

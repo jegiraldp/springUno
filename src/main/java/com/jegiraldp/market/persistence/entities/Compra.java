@@ -15,7 +15,7 @@ public class Compra {
     private int idCompra;
 
     @Column(name = "id_cliente")
-    private int idCliente;
+    private String idCliente;
 
     private LocalDateTime fecha;
 
@@ -40,11 +40,11 @@ public class Compra {
         this.idCompra = idCompra;
     }
 
-    public int getIdCliente() {
+    public String getIdCliente() {
         return idCliente;
     }
 
-    public void setIdCliente(int idCliente) {
+    public void setIdCliente(String idCliente) {
         this.idCliente = idCliente;
     }
 
